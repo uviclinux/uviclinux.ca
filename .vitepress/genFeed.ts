@@ -8,7 +8,7 @@ const url = `https://blog.gabedunn.dev`
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const feed = new Feed({
-  title: 'gabe\'s blog',
+  title: 'gabe\'s blog.',
   description: 'where i talk about linux, programming, and other fun computery stuff',
   id: url,
   link: url,
