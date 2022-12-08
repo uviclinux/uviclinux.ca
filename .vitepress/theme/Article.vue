@@ -5,8 +5,6 @@ import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import { data as posts } from './posts.data.js'
 
-// TODO remove author
-
 const { frontmatter: data } = useData()
 
 const route = useRoute()
@@ -29,7 +27,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
         class="
           text-3xl
           leading-9
-          font-extrabold
+          font-bold
           text-gray-900 dark:text-white
           tracking-tight
           sm:text-4xl sm:leading-10
@@ -66,7 +64,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
         "
       >
         <div v-if="nextPost" class="py-8">
-          <h2 class="text-xs tracking-wide uppercase text-gray-500 dark:text-white">
+          <h2 class="text-xs tracking-wide text-gray-500 dark:text-white">
             next article
           </h2>
           <div class="link">
@@ -74,7 +72,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
           </div>
         </div>
         <div v-if="prevPost" class="py-8">
-          <h2 class="text-xs tracking-wide uppercase text-gray-500 dark:text-white">
+          <h2 class="text-xs tracking-wide text-gray-500 dark:text-white">
             previous article
           </h2>
           <div class="link">

@@ -13,7 +13,7 @@ const { frontmatter } = useData()
         class="
           text-3xl
           leading-9
-          font-extrabold
+          font-bold
           text-gray-900 dark:text-white
           tracking-tight
           sm:text-4xl sm:leading-10
