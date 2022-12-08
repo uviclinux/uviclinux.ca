@@ -4,18 +4,18 @@ import { Feed } from 'feed'
 import { fileURLToPath } from 'url'
 import postsData from './theme/posts.data.js'
 
-const url = `https://blog.vuejs.org`
+const url = `https://blog.gabedunn.dev`
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const feed = new Feed({
-  title: 'The Vue Point',
-  description: 'The official blog for the Vue.js project',
+  title: 'gabe\'s blog',
+  description: 'where i talk about linux, programming, and other fun computery stuff',
   id: url,
   link: url,
   language: 'en',
-  image: 'https://vuejs.org/images/logo.png',
+  image: 'https://blog.gabedunn.dev/logo.png',
   favicon: `${url}/favicon.ico`,
-  copyright: 'Copyright (c) 2021-present, Yuxi (Evan) You and blog contributors'
+  copyright: 'Copyright (c) 2021-present, Gabe Dunn'
 })
 
 postsData.load(true).then((posts) => {

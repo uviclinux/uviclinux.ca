@@ -1,16 +1,18 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'The Vue Point',
-  description: 'The offical blog for the Vue.js project',
+  title: 'gabe\'s blog',
+  description: 'where i talk about linux, programming, and other fun computery stuff',
+	// TODO add opengraph metadata
+	// TODO change all metadata
   head: [
-    ['meta', { name: 'twitter:site', content: '@vuejs' }],
+    ['meta', { name: 'twitter:site', content: '@gabedunn_' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
     [
       'meta',
       {
         name: 'twitter:image',
-        content: 'https://vuejs.org/images/logo.png'
+        content: 'https://blog.gabedunn.dev/logo.png'
       }
     ],
     [
@@ -21,14 +23,15 @@ export default defineConfig({
         href: '/favicon.ico'
       }
     ],
-    [
-      'script',
-      {
-        src: 'https://cdn.usefathom.com/script.js',
-        'data-site': 'NYHGSGQV',
-        'data-spa': 'auto',
-        defer: ''
-      }
-    ]
+		// TODO add own tracking script
+    // [
+    //   'script',
+    //   {
+    //     src: '',
+    //     'data-site': '',
+    //     'data-spa': '',
+    //     defer: ''
+    //   }
+    // ]
   ]
 })

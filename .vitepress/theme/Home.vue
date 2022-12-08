@@ -43,7 +43,7 @@ const { frontmatter } = useData()
             </div>
             <div class="text-base leading-6 font-medium">
               <a class="link" aria-label="read more" :href="href"
-                >Read more →</a
+                >read more →</a
               >
             </div>
           </div>

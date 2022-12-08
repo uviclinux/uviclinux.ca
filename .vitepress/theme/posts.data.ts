@@ -80,12 +80,9 @@ function formatDate(date: string | Date): Post['date'] {
     date = new Date(date)
   }
   date.setUTCHours(12)
+	// ISO-8601 date string
   return {
     time: +date,
-    string: date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    })
+		string: date.toISOString().slice(0, date.toISOString().indexOf('T'))
   }
 }
