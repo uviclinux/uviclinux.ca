@@ -51,5 +51,8 @@ const isNotFound = computed(() => route.component === NotFound)
       <NotFound v-else-if="isNotFound" />
       <Article v-else />
     </main>
+		<div class="hidden">
+			<a rel="me" href="https://tilde.zone/@gabe">@gabe@tilde.zone</a>
+		</div>
   </div>
 </template>
