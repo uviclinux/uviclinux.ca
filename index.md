@@ -1,4 +1,4 @@
 ---
-title: gabe's blog.
-subtext: where i talk about linux, programming, and other fun computery stuff
+title: uvic linux
+subtext: the homepage for the university of victoria's linux club
 ---

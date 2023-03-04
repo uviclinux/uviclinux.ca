@@ -21,12 +21,12 @@ const isNotFound = computed(() => route.component === NotFound)
             alt="logo"
             src="/logo.svg"
           />
-          <span v-if="!isIndex" class="hidden md:inline dark:text-white">gabe's blog.</span>
+          <span v-if="!isIndex" class="hidden md:inline dark:text-white">uvic linux</span>
         </a>
         <div class="text-sm text-gray-500 dark:text-white leading-5">
           <a
             class="hover:text-gray-700 dark:hover:text-gray-200"
-            href="https://github.com/redxtech/blog"
+            href="https://github.com/uviclinux/uviclinux.ca"
             target="_blank"
             rel="noopener"
             ><span class="hidden sm:inline">github </span>source</a
@@ -38,10 +38,10 @@ const isNotFound = computed(() => route.component === NotFound)
           <span class="mr-2 ml-2">·</span>
           <a
             class="hover:text-gray-700 dark:hover:text-gray-200"
-            href="https://gabedunn.dev"
+            href="https://discord.gg/mjT5WjZQrH"
             target="_blank"
             rel="noopener"
-            >gabedunn.dev</a
+            >discord</a
           >
         </div>
       </nav>
@@ -51,9 +51,6 @@ const isNotFound = computed(() => route.component === NotFound)
       <NotFound v-else-if="isNotFound" />
       <Article v-else />
     </main>
-		<div class="hidden">
-			<a rel="me" href="https://tilde.zone/@gabe">@gabe@tilde.zone</a>
-		</div>
   </div>
 </template>
 

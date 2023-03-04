@@ -1,18 +1,17 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'gabe\'s blog',
-  description: 'where i talk about linux, programming, and other fun computery stuff',
+  title: 'uvic linux',
+  description: 'the homepage for the university of victoria\'s linux club',
 	// TODO add opengraph metadata
 	// TODO change all metadata
   head: [
-    ['meta', { name: 'twitter:site', content: '@gabedunn_' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
     [
       'meta',
       {
         name: 'twitter:image',
-        content: 'https://blog.gabedunn.dev/logo.png'
+        content: 'https://uviclinux.ca/logo.png'
       }
     ],
     [
