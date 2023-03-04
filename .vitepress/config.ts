@@ -22,6 +22,14 @@ export default defineConfig({
         href: '/favicon.ico'
       }
     ],
+    [
+      'link',
+      {
+        rel: 'shortcut icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      }
+    ],
 		// TODO add own tracking script
     // [
     //   'script',
