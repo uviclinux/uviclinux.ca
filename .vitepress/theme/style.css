@@ -3,13 +3,11 @@
 @tailwind utilities;
 
 :root {
-  /* --c-brand: #3eaf7c; */
-  /* --c-brand-light: #4abf8a; */
-	--c-bg: #006492;
- /*  --c-brand: #00A8F7; */
-	/* --c-brand-light: #E31133; */
-	--c-brand: #006492;
-	--c-brand-light: #00A8F7;
+	--c-bg: #002747;
+	--c-brand: #002747;
+	--c-brand-blue: #005493;
+	--c-brand-red: #C63527;
+	--c-brand-yellow: #F5AA1C;
 }
 
 html {
@@ -30,11 +28,12 @@ p img {
 }
 
 .link {
-  color: var(--c-brand);
+  color: var(--c-brand-blue);
 }
 
 .link:hover {
-  color: var(--c-brand-light);
+  color: var(--c-brand-red);
+	text-decoration: underline
 }
 
 .header-anchor {
