@@ -2,6 +2,7 @@
 title: Vim Workshops
 date: 2023-03-05
 author: Leo Mansfield
+avatar: https://cdn.discordapp.com/avatars/179825692257550346/88a1abfb4b2a17a3d68c4db5efe00eab.webp
 ---
 
 VIM - Vi IMproved
