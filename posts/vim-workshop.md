@@ -4,10 +4,10 @@ date: 2023-03-05
 author: Leo Mansfield
 ---
 
-```
 VIM - Vi IMproved
-a workshop series
-            
+> a workshop series
+-------------------------------
+```
 Vim is a monospaced text editor
 with useful modes and shortcuts
 type vimtutor to try the editor
