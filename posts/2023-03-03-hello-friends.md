@@ -6,7 +6,7 @@ gravatar: 0bff633cc9cae2c7f75c8688ce8ae526
 twitter: '@gabedunn_'
 ---
 
-Hello Friends.
+Hello, Friends!
 
 Welcome to the website for the UVic Linux Club!
 
