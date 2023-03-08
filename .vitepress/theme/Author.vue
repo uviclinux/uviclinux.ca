@@ -2,6 +2,13 @@
 import { useData } from 'vitepress'
 
 const { frontmatter } = useData()
+
+const getMastodonURL = (handle) => {
+  const parts = handle.split('@');
+  const user = parts[0]
+  const instance = parts[1]
+  return `https://${instance}/@${user}`
+}
 </script>
 
 <template>
@@ -27,6 +34,16 @@ const { frontmatter } = useData()
           <dl class="text-sm font-medium leading-5 whitespace-nowrap">
             <dt class="sr-only">name</dt>
             <dd class="text-gray-900 dark:text-white">{{ frontmatter.author }}</dd>
+            <dt v-if="frontmatter.mastodon" class="sr-only">mastodon</dt>
+            <dd v-if="frontmatter.mastodon">
+              <a
+                :href="getMastodonURL(frontmatter.mastodon)"
+                target="_blank"
+                rel="noopnener noreferrer"
+                class="link"
+                >{{ frontmatter.mastodon }}</a
+              >
+            </dd>
             <dt v-if="frontmatter.twitter" class="sr-only">twitter</dt>
             <dd v-if="frontmatter.twitter">
               <a

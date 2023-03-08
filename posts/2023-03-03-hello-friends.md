@@ -3,7 +3,7 @@ title: Hello Friends!
 date: 2023-03-03
 author: gabe dunn
 gravatar: 0bff633cc9cae2c7f75c8688ce8ae526
-twitter: '@gabedunn_'
+mastodon: 'gabe@tilde.zone'
 ---
 
 Hello, Friends!
