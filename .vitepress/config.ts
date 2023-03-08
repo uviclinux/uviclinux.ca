@@ -1,36 +1,36 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 export default defineConfig({
-  title: 'uvic linux',
-  description: 'the homepage for the university of victoria\'s linux club',
-	// TODO add opengraph metadata
-	// TODO change all metadata
+  title: "UVic Linux",
+  description: "The homepage for the University of Victoria's Linux Club",
+  // TODO add opengraph metadata
+  // TODO change all metadata
   head: [
-    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ["meta", { name: "twitter:card", content: "summary" }],
     [
-      'meta',
+      "meta",
       {
-        name: 'twitter:image',
-        content: 'https://uviclinux.ca/logo.png'
-      }
+        name: "twitter:image",
+        content: "https://uviclinux.ca/logo.png",
+      },
     ],
     [
-      'link',
+      "link",
       {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      }
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+      },
     ],
     [
-      'link',
+      "link",
       {
-        rel: 'shortcut icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      }
+        rel: "shortcut icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+      },
     ],
-		// TODO add own tracking script
+    // TODO add own tracking script
     // [
     //   'script',
     //   {
@@ -40,5 +40,5 @@ export default defineConfig({
     //     defer: ''
     //   }
     // ]
-  ]
-})
+  ],
+});

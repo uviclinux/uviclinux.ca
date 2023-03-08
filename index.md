@@ -1,4 +1,4 @@
 ---
-title: uvic linux
-subtext: the homepage for the university of victoria's linux club
+title: UVic Linux
+subtext: The homepage for the University of Victoria's Linux Club.
 ---

@@ -21,7 +21,7 @@ const isNotFound = computed(() => route.component === NotFound)
             alt="logo"
             src="/logo.png"
           />
-          <span v-if="!isIndex" class="hidden md:inline dark:text-white">uvic linux</span>
+          <span v-if="!isIndex" class="hidden md:inline dark:text-white">UVic Linux</span>
         </a>
         <div class="text-sm text-gray-500 dark:text-white leading-5">
           <a
