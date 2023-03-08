@@ -2,7 +2,7 @@
 > the homepage for the uvic linux club
 
 ## usage
-this project is based on vitepress, which used `vite`, `vue`, and `markdown`
+this project is based on vitepress, which uses `vite`, `vue`, and `markdown`
 in order to make an easily configurable and editable blog-style website.
 
 it depends on `node`, so to get started, you will need to `cd` into the
