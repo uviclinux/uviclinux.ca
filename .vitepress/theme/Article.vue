@@ -65,7 +65,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
       >
         <div v-if="nextPost" class="py-8">
           <h2 class="text-xs tracking-wide text-gray-500 dark:text-white">
-            next article
+            next post
           </h2>
           <div class="link">
             <a :href="nextPost.href">{{ nextPost.title }}</a>
@@ -73,14 +73,14 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
         </div>
         <div v-if="prevPost" class="py-8">
           <h2 class="text-xs tracking-wide text-gray-500 dark:text-white">
-            previous article
+            previous post
           </h2>
           <div class="link">
             <a :href="prevPost.href">{{ prevPost.title }}</a>
           </div>
         </div>
         <div class="pt-8">
-          <a class="link" href="/">← back to blog</a>
+          <a class="link" href="/">← back to home</a>
         </div>
       </footer>
     </div>
