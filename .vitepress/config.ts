@@ -41,4 +41,5 @@ export default defineConfig({
     //   }
     // ]
   ],
+  srcExclude: ["readme.md", "license.md"],
 });
