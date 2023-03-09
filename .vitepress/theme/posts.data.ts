@@ -17,6 +17,7 @@ export interface Post {
   }
   excerpt: string | undefined
   data?: Record<string, any>
+  draft: boolean | undefined;
 }
 
 interface PostWithData extends Post {
@@ -33,7 +34,8 @@ async function load(asFeed = false) {
   return fs
     .readdirSync(postDir)
     .map((file) => getPost(file, postDir, asFeed))
-    .sort((a, b) => b.date.time - a.date.time)
+    .filter((p: Post) => !p.draft)
+    .sort((a: Post, b: Post) => b.date.time - a.date.time);
 }
 
 export default {
@@ -61,6 +63,7 @@ function getPost(file: string, postDir: string, asFeed = false): Post {
     date: formatDate(data.date),
     excerpt: excerpt && md.render(excerpt)
   }
+    draft: data.draft,
   if (asFeed) {
     // only attach these when building the RSS feed to avoid bloating the
     // client bundle size
