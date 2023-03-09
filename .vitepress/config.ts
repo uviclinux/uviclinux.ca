@@ -41,5 +41,8 @@ export default defineConfig({
     //   }
     // ]
   ],
+  markdown: {
+    theme: 'dracula'
+  },
   srcExclude: ["readme.md", "license.md"],
 });
