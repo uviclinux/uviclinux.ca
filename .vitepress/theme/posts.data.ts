@@ -1,36 +1,36 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import { createMarkdownRenderer, MarkdownRenderer } from 'vitepress'
-import { fileURLToPath } from 'url'
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { createMarkdownRenderer, MarkdownRenderer } from "vitepress";
+import { fileURLToPath } from "url";
 
-let md: MarkdownRenderer
-const dirname = path.dirname(fileURLToPath(import.meta.url))
-const postDir = path.resolve(dirname, '../../posts')
+let md: MarkdownRenderer;
+const dirname = path.dirname(fileURLToPath(import.meta.url));
+const postDir = path.resolve(dirname, "../../posts");
 
 export interface Post {
-  title: string
-  href: string
+  title: string;
+  href: string;
   date: {
-    time: number
-    string: string
-  }
-  excerpt: string | undefined
-  data?: Record<string, any>
+    time: number;
+    string: string;
+  };
   draft: boolean | undefined;
+  excerpt: string | undefined;
+  data?: Record<string, any>;
 }
 
 interface PostWithData extends Post {
-  data: Record<string, any>
+  data: Record<string, any>;
 }
 
-declare const data: Post[]
-export { data }
+declare const data: Post[];
+export { data };
 
-async function load(): Promise<Post[]>
-async function load(asFeed: boolean): Promise<PostWithData[]>
+async function load(): Promise<Post[]>;
+async function load(asFeed: boolean): Promise<PostWithData[]>;
 async function load(asFeed = false) {
-  md = md || (await createMarkdownRenderer(process.cwd()))
+  md = md || (await createMarkdownRenderer(process.cwd()));
   return fs
     .readdirSync(postDir)
     .map((file) => getPost(file, postDir, asFeed))
@@ -39,53 +39,53 @@ async function load(asFeed = false) {
 }
 
 export default {
-  watch: path.join(postDir, '*.md'),
-  load
-}
+  watch: path.join(postDir, "*.md"),
+  load,
+};
 
-const cache = new Map()
+const cache = new Map();
 
 function getPost(file: string, postDir: string, asFeed = false): Post {
-  const fullePath = path.join(postDir, file)
-  const timestamp = fs.statSync(fullePath).mtimeMs
+  const fullePath = path.join(postDir, file);
+  const timestamp = fs.statSync(fullePath).mtimeMs;
 
-  const cached = cache.get(fullePath)
+  const cached = cache.get(fullePath);
   if (cached && timestamp === cached.timestamp) {
-    return cached.post
+    return cached.post;
   }
 
-  const src = fs.readFileSync(fullePath, 'utf-8')
-  const { data, excerpt } = matter(src, { excerpt: true })
+  const src = fs.readFileSync(fullePath, "utf-8");
+  const { data, excerpt } = matter(src, { excerpt: true });
 
   const post: Post = {
     title: data.title,
-    href: `/posts/${file.replace(/\.md$/, '.html')}`,
+    href: `/posts/${file.replace(/\.md$/, ".html")}`,
     date: formatDate(data.date),
-    excerpt: excerpt && md.render(excerpt)
-  }
     draft: data.draft,
+    excerpt: excerpt && md.render(excerpt),
+  };
   if (asFeed) {
     // only attach these when building the RSS feed to avoid bloating the
     // client bundle size
-    post.data = data
+    post.data = data;
   }
 
   cache.set(fullePath, {
     timestamp,
-    post
-  })
+    post,
+  });
 
-  return post
+  return post;
 }
 
-function formatDate(date: string | Date): Post['date'] {
+function formatDate(date: string | Date): Post["date"] {
   if (!(date instanceof Date)) {
-    date = new Date(date)
+    date = new Date(date);
   }
-  date.setUTCHours(12)
-	// ISO-8601 date string
+  date.setUTCHours(12);
+  // ISO-8601 date string
   return {
     time: +date,
-		string: date.toISOString().slice(0, date.toISOString().indexOf('T'))
-  }
+    string: date.toISOString().slice(0, date.toISOString().indexOf("T")),
+  };
 }
