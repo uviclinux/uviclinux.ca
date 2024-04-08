@@ -26,6 +26,14 @@ const isNotFound = computed(() => route.component === NotFound)
         <div class="text-sm text-gray-500 dark:text-white leading-5">
           <a
             class="hover:text-gray-700 dark:hover:text-gray-200"
+            href="/privacy-guide.pdf"
+            target="_blank"
+            rel="noopener"
+            >privacy guide</a
+          >
+          <span class="mr-2 ml-2">·</span>
+          <a
+            class="hover:text-gray-700 dark:hover:text-gray-200"
             href="https://github.com/uviclinux/uviclinux.ca"
             target="_blank"
             rel="noopener"
@@ -56,7 +64,6 @@ const isNotFound = computed(() => route.component === NotFound)
 
 <style scoped>
 .fullheight {
-	min-height: 100vh;
+  min-height: 100vh;
 }
 </style>
-
